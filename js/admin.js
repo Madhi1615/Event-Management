@@ -88,7 +88,7 @@ function renderList() {
   const sorted = [...EVENTS].sort((a, b) => a.date.localeCompare(b.date));
   wrap.innerHTML = sorted.map(ev => `
     <div class="event-row">
-      ${ev.poster ? `<img src="../${ev.poster}" alt="">` : `<div style="width:46px;height:60px;background:var(--ink-deep);border-radius:4px;"></div>`}
+      ${ev.poster ? `<img src="${ev.poster}?t=${Date.now()}" alt="">` : `<div style="width:46px;height:60px;background:var(--ink-deep);border-radius:4px;"></div>`}
       <div class="meta">
         <strong>${escapeAttr(ev.title)}</strong>
         <span>${ev.type} · ${ev.date}${ev.venue ? " · " + escapeAttr(ev.venue) : ""}</span>
