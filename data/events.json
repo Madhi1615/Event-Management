@@ -31,5 +31,16 @@
     "description": "Round-robin tournament between all five departments.",
     "poster": "",
     "createdAt": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "evt-1786610729040",
+    "title": "AI Hackathon",
+    "type": "Tech",
+    "date": "2026-08-20",
+    "time": "9:00 AM",
+    "venue": "SIMATS Auditorium",
+    "description": "AI Hackathon",
+    "poster": "posters/1786610727858-ai-hackathon.jpg",
+    "createdAt": "2026-08-13T08:45:29.040Z"
   }
 ]
