@@ -21,5 +21,5 @@ const CONFIG = {
   //     .then(buf => console.log(Array.from(new Uint8Array(buf))
   //       .map(b => b.toString(16).padStart(2,'0')).join('')))
   //
-  ADMIN_PASSWORD_HASH: "77c9c10fe02348165bfb45d2a896c5bc0dfaae7cd2a0607edc08b381efd8fd59"
+  ADMIN_PASSWORD_HASH: "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
 };
