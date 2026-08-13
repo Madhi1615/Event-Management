@@ -42,5 +42,16 @@
     "description": "AI Hackathon",
     "poster": "posters/1786610727858-ai-hackathon.jpg",
     "createdAt": "2026-08-13T08:45:29.040Z"
+  },
+  {
+    "id": "evt-1786628371334",
+    "title": "AI WORKSHOP",
+    "type": "Tech",
+    "date": "2026-08-14",
+    "time": "5.00 PM",
+    "venue": "ONLINE",
+    "description": "HANDS ON AI EXPERIENCE",
+    "poster": "",
+    "createdAt": "2026-08-13T13:39:31.334Z"
   }
 ]
