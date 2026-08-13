@@ -1,0 +1,35 @@
+[
+  {
+    "id": "evt-sample-1",
+    "title": "Intro to Machine Learning",
+    "type": "Tech",
+    "date": "2026-09-10",
+    "time": "3:00 PM",
+    "venue": "Lab 204",
+    "description": "A hands-on session covering the basics of ML with live coding.",
+    "poster": "",
+    "createdAt": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "evt-sample-2",
+    "title": "Annual Cultural Night",
+    "type": "Cultural",
+    "date": "2026-09-20",
+    "time": "6:00 PM",
+    "venue": "Main Auditorium",
+    "description": "Music, dance and drama performances from every department.",
+    "poster": "",
+    "createdAt": "2026-08-13T00:00:00.000Z"
+  },
+  {
+    "id": "evt-sample-3",
+    "title": "Inter-Department Football",
+    "type": "Sports",
+    "date": "2026-08-01",
+    "time": "9:00 AM",
+    "venue": "Sports Ground",
+    "description": "Round-robin tournament between all five departments.",
+    "poster": "",
+    "createdAt": "2026-08-13T00:00:00.000Z"
+  }
+]

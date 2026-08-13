@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department Event Board</title>
+<meta name="description" content="Tech, cultural and sports events, pinned up and sorted by date.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="header-row">
+      <div>
+        <p class="eyebrow">Notice Board · updated live</p>
+        <h1>What's On</h1>
+        <p>Tech talks, cultural nights and sports fixtures — pinned up as they're announced, sorted by date.</p>
+      </div>
+      <a class="admin-link" href="admin.html">Organiser login →</a>
+    </div>
+  </header>
+
+  <nav class="filters">
+    <button class="filter-chip active" data-type="All">All</button>
+    <button class="filter-chip" data-type="Tech">Tech</button>
+    <button class="filter-chip" data-type="Cultural">Cultural</button>
+    <button class="filter-chip" data-type="Sports">Sports</button>
+  </nav>
+
+  <main>
+    <section class="board-section" id="upcoming-section"></section>
+    <section class="board-section" id="past-section"></section>
+  </main>
+
+  <footer class="board-footer">
+    Event data lives in <code>data/events.json</code> in this repository — no external database.
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

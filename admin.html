@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Event Board</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+
+  <h1>Organiser Panel</h1>
+  <p class="sub"><a href="index.html" style="color:var(--tech);">← Back to the board</a></p>
+
+  <!-- LOGIN -->
+  <div class="panel" id="login-panel">
+    <h2>Sign in</h2>
+    <form id="login-form">
+      <label for="login-password">Shared organiser password</label>
+      <input type="password" id="login-password" autocomplete="off" required>
+
+      <label for="login-token">Your personal GitHub token</label>
+      <input type="password" id="login-token" autocomplete="off" placeholder="ghp_… or github_pat_…" required>
+
+      <div id="login-status" class="status-msg"></div>
+      <button type="submit">Sign in</button>
+    </form>
+    <p style="font-size:0.78rem; color:rgba(246,242,233,0.45); margin-top:1rem; line-height:1.5;">
+      Your token is only ever kept in this browser tab (never saved to the repo) and is what
+      actually authorises changes — the password just keeps casual visitors out. See the README
+      for how to create a token scoped to just this repository.
+    </p>
+  </div>
+
+  <!-- ADMIN -->
+  <div class="panel hidden" id="admin-panel">
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2 id="form-title">Add an event</h2>
+      <button class="secondary" id="logout-btn" type="button" style="padding:0.4rem 0.8rem; font-size:0.7rem;">Sign out</button>
+    </div>
+
+    <form id="event-form">
+      <label for="f-title">Title</label>
+      <input type="text" id="f-title" required>
+
+      <div class="field-row">
+        <div>
+          <label for="f-type">Type</label>
+          <select id="f-type" required>
+            <option value="Tech">Tech</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-date">Date</label>
+          <input type="date" id="f-date" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label for="f-time">Time (optional)</label>
+          <input type="text" id="f-time" placeholder="e.g. 4:00 PM">
+        </div>
+        <div>
+          <label for="f-venue">Venue (optional)</label>
+          <input type="text" id="f-venue" placeholder="e.g. Main Auditorium">
+        </div>
+      </div>
+
+      <label for="f-desc">Description (optional)</label>
+      <textarea id="f-desc" placeholder="A line or two about the event"></textarea>
+
+      <label for="f-poster">Poster image (optional, resized automatically)</label>
+      <input type="file" id="f-poster" accept="image/*">
+
+      <div id="form-status" class="status-msg"></div>
+
+      <div style="display:flex; gap:0.6rem;">
+        <button type="submit" id="submit-btn">Publish event</button>
+        <button type="button" class="secondary hidden" id="cancel-edit">Cancel edit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="panel hidden" id="admin-panel-list-wrap">
+    <h2>All events</h2>
+    <div id="list-status" class="status-msg"></div>
+    <div id="event-list"></div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    // keep the list panel's visibility in sync with the admin panel
+    const obs = new MutationObserver(() => {
+      document.getElementById("admin-panel-list-wrap")
+        .classList.toggle("hidden", document.getElementById("admin-panel").classList.contains("hidden"));
+    });
+    obs.observe(document.getElementById("admin-panel"), { attributes: true, attributeFilter: ["class"] });
+  </script>
+</div>
+</body>
+</html>
